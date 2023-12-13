@@ -1,10 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html lan ="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="Description" content="Pacific Trails Resort is a vaction spot
+		for those who want to get away from there mor,al Lives. Our resort has lots of fun activites to do.We offer you an incredible experinece when you want to have some family time  or just feel like you need some relaxtion">
+		<title>Pacific Trails Resort::Reservations</title>
+		<link href="pacific.css" type="text/css" rel="stylesheet">
+	</head>
 
-</body>
+	<body>
+
+		<div id="wrapper">
+			<header>
+				<h1>Pacific Trails Resort</h1>
+			</header>
+
+			<nav>
+				<ul>
+					<li><a href="index.html"> Home</a></li>
+					<li><a href="{% url 'yurts' %}">Yurts</a></li>
+                    <li><a href="{% url 'activities' %}"> Activities</a></li>
+                    <li><a href="{% url 'reservations' %}"> Reservations</a></li>
+                    <li><a href="{% url 'details' %}"> Reservation Details</a></li>
+				</ul>
+			</nav>
+
+
+
+			<main>
+				<h2>Reservations at Pacific Trails</h2>
+				<h3>Contact Us Today!</h3>
+				<p>Required Fileds are marked with an asterisk*</p>
+
+				<form method="post" action="http://webdevbasics.net/scripts/pacific.php">
+					<label for="myFName">*First Name</label>
+					<input type="text" name="myFName"  id="myFName"  value="" placeholder="enter your first  name" required="required">
+
+					<label for="myLName">*Last Name</label>
+					<input type="text" name="myLName"  id="myLName"  value="" placeholder="enter your last name" required="required">
+
+					<label for="myEmail">*Email</label>
+					<input type="email" name="myEmail"  id="myEmail"  value="" placeholder="enter your email address :yourName@example.com" size="35" required="required">
+
+					<label for="myPhone">*Phone</label>
+					<input type="tel" name="myPhone"  id="myPhone"  value="" placeholder="enter your phone number" maxlength="12" required="required">
+
+					<label for="myDate">*Arrival Date</label>
+					<input type="date" name="myDate"  id="myDate"  value="" placeholder="your arrival date" required="required">
+
+					<label for="myNights">*Nights</label>
+					<input type="number" name="myNights" min="" id="myNights" min="1" max="14" value="" placeholder="0" required="required">
+
+					<label for="myComments">Comments</label>
+					<textarea name="myComments" id="myCcomments" rows ="2" cols="30" >comments here</textarea><br><br>
+
+					<input type="submit" name="submitButton" id="submitButton" value="Submit">
+				</form>
+
+				<div id="contact">
+					<p>
+						<span class="resort">Pacific Trails Resort</span><br>
+
+						12010 Pacific Trail Road<br>
+						Zephyr , 9555<br><br>
+						<a id="mobile" href="tel:888-555-5555">888-555-5555</a>
+						<span id="desktop">888-555-5555</span>
+					</p>
+				</div>
+			</main>
+
+			<footer>
+				<small><i>Copyright 2018 Pacific Trails Resort <br><i/></small>
+				<a href="mailto: nikhil.dhage@gmail.com">nikhil.dhage@gmail.com</a>
+			</footer>
+		</div>
+	</body>
 </html>
