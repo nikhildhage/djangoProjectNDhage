@@ -19,10 +19,11 @@
 
 			<nav>
 				<ul>
-					<li><a href="index.html"> Home</a></li>
-					<li><a href="yurts.html">Yurts</a></li>
-					<li><a href="activities.html"> Activities</a></li>
-					<li><a href="reservations.html"> Reservations</a></li>
+					<li><a href="home"> Home</a></li>
+					<li><a href="{% url 'yurts' %}">Yurts</a></li>
+                    <li><a href="{% url 'activities' %}"> Activities</a></li>
+                    <li><a href="{% url 'reservations' %}"> Reservations</a></li>
+                    <li><a href="{% url 'details' %}"> Reservation Details</a></li>
 				</ul>
 			</nav>
 
