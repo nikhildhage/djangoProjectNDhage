@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 
-# App Urls
+# Pacific Trails Resort Urls
 urlpatterns = [
     path("", views.index, name="index"),
     path("yurts", views.yurts, name="yurts"),
