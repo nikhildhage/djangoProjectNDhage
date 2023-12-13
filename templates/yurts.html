@@ -1,10 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html lan ="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="Description" content="Pacific Trails Resort is a vaction spot
+		for those who want to get away from there mor,al Lives. Our resort has lots of fun activites to do.We offer you an incredible experinece when you want to have some family time  or just feel like you need some relaxtion">
+		<title>Pacific Trails Resort::Yurts</title>
+		<link href="pacific.css" type="text/css" rel="stylesheet">
 
-</body>
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<header>
+				<h1>Pacific Trails Resort</h1>
+			</header>
+
+			<nav>
+   				<ul>
+					<li><a href="index.html"> Home</a></li>
+					<li><a href="{% url 'yurts' %}">Yurts</a></li>
+                    <li><a href="{% url 'activities' %}"> Activities</a></li>
+                    <li><a href="{% url 'reservations' %}"> Reservations</a></li>
+                    <li><a href="{% url 'details' %}"> Reservation Details</a></li>
+				</ul>
+			</nav>
+
+			<div id="yurthero">
+
+			</div>
+
+			<main>
+				<h2>The Yurts at Pacifc Trails</h2>
+				<dl>
+					<dt><strong>What is a Yurt?</strong></dt>
+					<dd>Our Luxury yurts are permanent structures four feet off the ground.<br>Each yurt is fully enclosed with canvas walls ,a wooden floor , and a<br> roof dome that can be opended.</dd><br>
+
+					<dt><strong>How are the yurts furnished?</strong></dt>
+					<dd>Each yurt is furnished with queen-sized bed with down qult and<br> gas-fired stove.Your luxury camping experience includes electricity<br> and with a sink with hot and cold runnning water.Shower and restroom<br> facilities are located in the lodge.</dd><br>
+
+					<dt><strong>What should i bring?</strong></dt>
+					<dd>Most guests pack comfortable walking shoesand plan to dress for<br> chaning weatherwith light layers of clothing.Its also helpful to<br> bring a flashlight and a sense of adventure.</dd>
+				</dl><br>
+				<h3>Yurts Packages</h3>
+				<p>
+					A variety of luxury yurt packages available.
+					Choose a package below and contact us to begin<br>
+					your reservation.We happy to build a custom package just for you.
+				</p>
+
+				<table >
+					<thead>
+						<tr>
+							<th>Package Name</th>
+							<th>Description</th>
+							<th>Nights</th>
+							<th>Cost Per Person</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>WeekEnd <br>Escape</td>
+							<td><span class="text">Two Breakfeats , a trail map , and a picinic snack</span></td>
+							<td>2</td>
+							<td>$450</td>
+						</tr>
+						<tr>
+							<td>Zen Retreat</td>
+							<td><span class="text">Four Breakfeats , a trail map ,a picinic snack and a pass for the daily sunrise</span></td>
+							<td>4</td>
+							<td>$600</td>
+						</tr>
+						<tr>
+							<td>Kayak Away</td>
+							<td><span class="text">two Breakfeats , two hours of kayak rental daily, and a trail map</span></td>
+							<td>2</td>
+							<td>$500</td>
+						</tr>
+					</tbody>
+				</table>
+			</main>
+
+
+
+			<footer>
+				<small><i>Copyright 2018 Pacific Trails Resort <br><i/></small>
+				<a href="mailto: nikhil.dhage@gmail.com">nikhil.dhage@gmail.com</a>
+			</footer>
+		</div>
+	</body>
 </html>
