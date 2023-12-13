@@ -27,6 +27,6 @@ def reservations(request):
     return render(request, "reservations.html")
 
 
-# Contact View
+# Details View
 def details(request):
     return render(request, "reservationDetails.html")
