@@ -1,10 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
 
-</body>
-</html>
+{% block content %}
+    <main>
+				<h2>Reservations Details </h2>
+				<h3>Please Keep track of all Reservations  </h3>
+                <br>
+				<p>
+                    Thank you for staying with us.
+                    Reservation details will be emailed to all user who have reservations
+                    Rules and regulations must be strictly followed.
+                    Food and Drink aare allowed
+                </p>
+
+				<form method="post" action="{% url 'details' %}">
+					<label for="myFName">*First Name</label>
+					<input type="text" name="myFName"  id="myFName"  value="" placeholder="enter your first  name" required="required">
+
+					<label for="myLName">*Last Name</label>
+					<input type="text" name="myLName"  id="myLName"  value="" placeholder="enter your last name" required="required">
+
+					<label for="myEmail">*Email</label>
+					<input type="email" name="myEmail"  id="myEmail"  value="" placeholder="enter your email address :yourName@example.com" size="35" required="required">
+
+					<label for="myPhone">*Phone</label>
+					<input type="tel" name="myPhone"  id="myPhone"  value="" placeholder="enter your phone number" maxlength="12" required="required">
+
+					<label for="myDate">*Arrival Date</label>
+					<input type="date" name="myDate"  id="myDate"  value="" placeholder="your arrival date" required="required">
+
+					<label for="myNights">*Nights</label>
+					<input type="number" name="myNights" min="" id="myNights" min="1" max="14" value="" placeholder="0" required="required">
+
+					<label for="myComments">Comments</label>
+					<textarea name="myComments" id="myCcomments" rows ="2" cols="30" >comments here</textarea><br><br>
+
+					<input type="submit" name="submitButton" id="submitButton" value="Submit">
+				</form>
+
+				<div id="contact">
+					<p>
+						<span class="resort">Pacific Trails Resort</span><br>
+
+						12010 Pacific Trail Road<br>
+						Zephyr , 9555<br><br>
+						<a id="mobile" href="tel:888-555-5555">888-555-5555</a>
+						<span id="desktop">888-555-5555</span>
+					</p>
+				</div>
+			</main>
+{% endblock %}
