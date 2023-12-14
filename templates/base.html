@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lan="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Pacific Trails Resort is a vaction spot
+		for those who want to get away from there mor,al Lives. Our resort has lots of fun activites to do.We offer you an incredible experinece when you want to have some family time  or just feel like you need some relaxtion">
+    <title>Pacific Trails Resort</title>
+    <link href="{% static '/css/pacific.css' %}" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="wrapper">
+    <header>
+        <h1>Pacific Trails Resort</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/pacificTrailsResort/"> Home</a></li>
+            <li><a href="{% url 'yurts' %}">Yurts</a></li>
+            <li><a href="{% url 'activities' %}"> Activities</a></li>
+            <li><a href="{% url 'reservations' %}"> Reservations</a></li>
+            <li><a href="{% url 'details' %}"> Reservation Details</a></li>
+        </ul>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+        <small><i>Copyright 2023 Pacific Trails Resort</i></small><br>
+        <a href="mailto: nikhil.dhage@gmail.com">nikhil.dhage@gmail.com</a>
+    </footer>
+</div>
+</body>
+</html>
