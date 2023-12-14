@@ -1,33 +1,9 @@
-<!DOCTYPE html>
-<html lan="en">
-<head>
+{% extends 'base.html' %}
+{% load static %}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="Pacific Trails Resort is a vaction spot
-		for those who want to get away from there mor,al Lives. Our resort has lots of fun activites to do.We offer you an incredible experinece when you want to have some family time  or just feel like you need some relaxtion">
-    <title>Pacific Trails Resort</title>
-    <link href="pacific.css" type="text/css" rel="stylesheet">
-</head>
-
-<body>
-
-<div id="wrapper">
-    <header>
-        <h1>Pacific Trails Resort</h1>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html"> Home</a></li>
-            <li><a href="{% url 'yurts' %}">Yurts</a></li>
-            <li><a href="{% url 'activities' %}"> Activities</a></li>
-            <li><a href="{% url 'reservations' %}"> Reservations</a></li>
-            <li><a href="{% url 'details' %}"> Reservation Details</a></li>
-        </ul>
-    </nav>
-
+{% block content %}
     <div id="homehero">
+        <img src="{% static '/pacificImaages/coast2.jpg' %}">
     </div>
 
     <main>
@@ -35,17 +11,18 @@
 
         <h2>Enjoy Nature in Luxury</h2>
         <p>
-            <span class="resort">Pacifi Trails Resort </span> offers a special lodging
-            experience on the California North Coast<br> with panaramic views of the Pacific Ocean.Your stay
-            at Pcific Trails Resort includes a<br> sumtuously appointed private yurt and a cooked-to-order
-            breakfeast each morning.
+            <span class="resort">Pacific Trails Resort </span> offers a special lodging
+            experience on the California North Coast<br> with panoramic views of the Pacific Ocean.Your stay
+            at Pacific Trails Resort includes a<br> sumptuously appointed private yurt and a cooked-to-order
+            breakfast each morning.
         </p>
 
         <video autobuffer autoloop loop controls>
-            <source src="Videos/pacific.mp4" type="video/mp4">
-            <source src="Videos/PacificTrailsResort.ogv" type="video/ogg">
+            <source src="{% static '/videos/pacific.mp4' %}" type="video/mp4">
+            <source src="{% static '/videos/PacificTrailsResort.ogv' %}" type="video/ogg">
             <source src="Sounds/greg.mp3" type="audio/mp3">
         </video>
+
 
         <ul>
             <li>Unwind in the heated outdoor pool and whirlpool.</li>
@@ -66,11 +43,4 @@
             </p>
         </div>
     </main>
-
-    <footer>
-        <small><i>Copyright 2023 Pacific Trails Resort</i></small><br>
-        <a href="mailto: nikhil.dhage@gmail.com">nikhil.dhage@gmail.com</a>
-    </footer>
-</div>
-</body>
-</html>
+{% endblock %}
