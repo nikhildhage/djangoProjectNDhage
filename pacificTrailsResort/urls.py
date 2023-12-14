@@ -10,4 +10,5 @@ urlpatterns = [
     path("activities", views.activities, name="activities"),
     path("reservations", views.reservations, name="reservations"),
     path("details", views.details, name="details"),
+    path('details/<int:reservation_id>/', views.details, name='details'),
 ]

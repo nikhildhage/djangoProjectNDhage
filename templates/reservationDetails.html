@@ -6,12 +6,18 @@
 				<h2>Reservations Details </h2>
 				<h3>Please Keep track of all Reservations  </h3>
                 <br>
-				<p>
-                    Thank you for staying with us.
-                    Reservation details will be emailed to all user who have reservations
-                    Rules and regulations must be strictly followed.
-                    Food and Drink aare allowed
-                </p>
+				<p>Thank you for staying with us. Below are the details of your reservation:</p>
+
+				<div>
+				<strong>Name:</strong> {{ reservation.first_name }} {{ reservation.last_name }}<br>
+				<strong>Email:</strong> {{ reservation.email }}<br>
+				<strong>Phone:</strong> {{ reservation.phone_number }}<br>
+				<strong>Arrival Date:</strong> {{ reservation.arrival_date }}<br>
+				<strong>Nights:</strong> {{ reservation.nights }}<br>
+				<strong>Comments:</strong> {{ reservation.comments }}
+				</div>
+
+				<br>
 
 
 				<div id="contact">

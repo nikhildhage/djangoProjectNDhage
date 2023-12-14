@@ -101,11 +101,13 @@ def reservations(request):
         except Exception as e:
             print(e.message)
 
-        return redirect('details')
+        reservation.save()
+        return redirect('details', reservation_id=reservation.reservation_id)
 
     return render(request, "reservations.html")
 
 
 # Details View
-def details(request):
-    return render(request, "reservationDetails.html")
+def details(request, reservation_id):
+    reservation = Reservation.objects.get(reservation_id=reservation_id)
+    return render(request, "reservationDetails.html", {'reservation': reservation})
