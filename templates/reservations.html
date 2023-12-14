@@ -3,6 +3,31 @@
 
 {% block content %}
     <main>
+
+				<!-- Trigger the modal with a button -->
+				<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+				<!-- Modal -->
+				<div id="myModal" class="modal fade" role="dialog">
+				  <div class="modal-dialog">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+					  <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Modal Header</h4>
+					  </div>
+					  <div class="modal-body">
+						<p>Some text in the modal.</p>
+					  </div>
+					  <div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					  </div>
+					</div>
+
+				  </div>
+				</div>
+
 				<h2>Reservations at Pacific Trails</h2>
 				<h3>Contact Us Today!</h3>
 				<p>Required Fields are marked with an asterisk*</p>
@@ -27,7 +52,7 @@
 					<input type="number" name="myNights" min="" id="myNights" min="1" max="14" value="" placeholder="0" required="required">
 
 					<label for="myComments">Comments</label>
-					<textarea name="myComments" id="myCcomments" rows ="2" cols="30" >comments here</textarea><br><br>
+					<textarea name="myComments" id="myComments" rows ="2" cols="30" >comments here</textarea><br><br>
 
 					<input type="submit" name="submitButton" id="submitButton" value="Submit">
 				</form>
