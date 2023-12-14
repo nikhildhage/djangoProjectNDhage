@@ -5,8 +5,8 @@ Nikhil Dhage
 
 
 ### Description
-This project uses Django to deploy a small weather web app. 
-It integrates with the Sendgrid API to send and receive. 
+This project uses Django to deploy a small web app for a travel agency. 
+It integrates with the Sendgrid API to send and receive emails to clients. 
 Users can register, login, and view Pacific Trails Resort webpages and 
 can  reserve vacations to the resort using the online reservation form.
 
