@@ -20,8 +20,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from pacificTrailsResort import views
 
 urlpatterns = [
+    path("", views.index, name="index"),
     path("pacificTrailsResort/", include("pacificTrailsResort.urls")),
-    path("pacificTrailsResort/", views.index, name="index"),
     path("admin/", admin.site.urls),
 ]
 
