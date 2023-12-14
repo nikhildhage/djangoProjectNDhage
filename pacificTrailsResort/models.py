@@ -19,3 +19,4 @@ class Reservation(models.Model):
     phone_number = models.CharField(max_length=15)
     arrival_date = models.DateField()
     nights = models.IntegerField()
+    comments = models.TextField(null=True, blank=True)
