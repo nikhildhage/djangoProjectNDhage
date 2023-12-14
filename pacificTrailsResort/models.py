@@ -5,8 +5,8 @@ from django.db import models
 
 class User(models.Model):
     user_id = models.AutoField(primary_key=True)
-    user_name = models.CharField(max_length=100)
-    user_password = models.CharField(max_length=100)
+    user_firstname = models.CharField(max_length=100)
+    user_lastname = models.CharField(max_length=100)
     user_email = models.EmailField(unique=True)
     reservation = models.ForeignKey('Reservation', on_delete=models.SET_NULL, null=True)
 
