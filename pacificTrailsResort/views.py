@@ -12,6 +12,8 @@ from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
 # Index view
 def index(request):
+    if not request.user.is_authenticated:
+        return redirect("registration")
     return render(request, "index.html")
 
 
