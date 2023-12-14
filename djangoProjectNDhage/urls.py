@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from pacificTrailsResort import views
 
 urlpatterns = [
@@ -24,3 +24,5 @@ urlpatterns = [
     path("pacificTrailsResort/", views.index, name="index"),
     path("admin/", admin.site.urls),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
