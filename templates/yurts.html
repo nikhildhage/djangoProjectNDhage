@@ -1,34 +1,10 @@
-<!DOCTYPE html>
-<html lan ="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="Description" content="Pacific Trails Resort is a vaction spot
-		for those who want to get away from there mor,al Lives. Our resort has lots of fun activites to do.We offer you an incredible experinece when you want to have some family time  or just feel like you need some relaxtion">
-		<title>Pacific Trails Resort::Yurts</title>
-		<link href="pacific.css" type="text/css" rel="stylesheet">
+{% extends 'base.html' %}
+{% load static %}
 
-	</head>
-
-	<body>
-		<div id="wrapper">
-			<header>
-				<h1>Pacific Trails Resort</h1>
-			</header>
-
-			<nav>
-   				<ul>
-					<li><a href="index.html"> Home</a></li>
-					<li><a href="{% url 'yurts' %}">Yurts</a></li>
-                    <li><a href="{% url 'activities' %}"> Activities</a></li>
-                    <li><a href="{% url 'reservations' %}"> Reservations</a></li>
-                    <li><a href="{% url 'details' %}"> Reservation Details</a></li>
-				</ul>
-			</nav>
-
-			<div id="yurthero">
-
-			</div>
+{% block content %}
+    	<div id="yurthero">
+            <img src="{% static '/pacificImages/yurt.jpg' %}">
+        </div>
 
 			<main>
 				<h2>The Yurts at Pacifc Trails</h2>
@@ -80,13 +56,4 @@
 					</tbody>
 				</table>
 			</main>
-
-
-
-			<footer>
-				<small><i>Copyright 2023 Pacific Trails Resort <br><i/></small>
-				<a href="mailto: nikhil.dhage@gmail.com">nikhil.dhage@gmail.com</a>
-			</footer>
-		</div>
-	</body>
-</html>
+{% endblock %}
