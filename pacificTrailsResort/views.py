@@ -6,14 +6,15 @@ from sendgrid.helpers.mail import *
 from sendgrid import SendGridAPIClient
 from .models import User, Reservation
 from django.utils.dateparse import parse_date
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login, logout
 
 
 # Create your views here.
 # Index view
+@login_required(login_url="login")
 def index(request):
-    if not request.user.is_authenticated:
-        return redirect("registration")
     return render(request, "index.html")
 
 
@@ -22,17 +23,36 @@ def registration(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
             #  log the user in
-            return redirect('yurts')
+            login(request, user)
+            return redirect('index')
     else:
         form = UserCreationForm()
     return render(request, "registration.html", {'form': form})
 
 
 # Login view
-def login(request):
-    return render(request, "login.html")
+def login_view(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            # log the user in
+            user = form.get_user()
+            login(request, user)
+            if 'next' in request.POST:
+                return redirect(request.POST.get('next'))
+            else:
+                return redirect('index')
+    else:
+        form = AuthenticationForm()
+    return render(request, "login.html", {'form': form})
+
+
+def logout_view(request):
+    if request.method == 'POST':
+        logout(request)
+        return redirect("index")
 
 
 # Yurts view

@@ -55,7 +55,7 @@ ROOT_URLCONF = 'djangoProjectNDhage.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
+        'DIRS': [BASE_DIR / 'pacificTrailsResort' / 'templates']
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -120,7 +120,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
+    os.path.join(BASE_DIR / "pacificTrailsResort", "static")
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "assets")
 

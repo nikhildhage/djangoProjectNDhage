@@ -23,11 +23,23 @@
 
     <nav>
         <ul>
+            {% if user.is_authenticated %}
+            <li>
+                <form class="logout-link" action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">Logout</button>
+                </form>
+            </li>
+
             <li><a href="/pacificTrailsResort/"> Home</a></li>
             <li><a href="{% url 'yurts' %}">Yurts</a></li>
             <li><a href="{% url 'activities' %}"> Activities</a></li>
             <li><a href="{% url 'reservations' %}"> Reservations</a></li>
             <li><a href="{% url 'details' %}"> Reservation Details</a></li>
+            {% else %}
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'registration' %}">Registration</a></li>
+            {% endif %}
         </ul>
     </nav>
 
